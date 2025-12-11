@@ -5,135 +5,294 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    min-height: 100vh;
+    color: #e0e0e0;
+    background: #0a0a0a;
+    overflow-x: hidden;
+}
+
+/* 导航栏 */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(20, 25, 30, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1.2rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo h1 {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.navbar nav a {
+    color: #b0b0b0;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.navbar nav a:hover {
+    color: #ffffff;
+}
+
+/* 主视觉区域 */
+main {
+    padding-top: 80px;
+}
+
+.hero-section {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.4) grayscale(0.3);
+}
+
+.hero-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(20, 25, 30, 0.8) 100%);
+}
+
+/* Slogan 色块 - 左侧 */
+.slogan-box {
+    position: relative;
+    z-index: 10;
+    background: linear-gradient(135deg, rgba(70, 130, 180, 0.92) 0%, rgba(100, 149, 237, 0.88) 100%);
+    padding: 4rem 3.5rem;
+    max-width: 580px;
+    margin-left: 8%;
+    border-radius: 2px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.slogan-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+
+.slogan-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+}
+
+.cta-button {
+    background: rgba(255, 255, 255, 0.95);
+    color: #1a1a1a;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 2px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.cta-button:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* 内容区域 */
+.content-section {
+    padding: 5rem 4rem;
+    background: #141414;
+}
+
+.content-section.dark {
+    background: #0f0f0f;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    background: rgba(255, 255, 255, 0.95);
-    min-height: 100vh;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 2rem;
-    text-align: center;
-}
-
-header h1 {
-    margin-bottom: 1rem;
+.content-section h2 {
     font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    font-weight: 700;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: opacity 0.3s;
-}
-
-nav a:hover {
-    opacity: 0.8;
-}
-
-main {
-    padding: 2rem;
-}
-
-section {
-    margin-bottom: 3rem;
-    padding: 2rem;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.hero {
-    text-align: center;
-    padding: 4rem 2rem;
-}
-
-.hero h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #667eea;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 1rem;
-}
-
-.update-time {
-    font-size: 0.9rem;
-    color: #999;
-    font-style: italic;
-}
-
-#updateTime {
-    font-weight: bold;
-    color: #667eea;
-}
-
-section h2 {
-    color: #667eea;
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
-}
-
-section p {
-    margin-bottom: 1rem;
+.content-section p {
     font-size: 1.1rem;
+    color: #b0b0b0;
+    line-height: 1.8;
+    margin-bottom: 1rem;
 }
 
-section a {
-    color: #667eea;
+.content-section a {
+    color: #6495ed;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-section a:hover {
-    text-decoration: underline;
+.content-section a:hover {
+    color: #87ceeb;
 }
 
+/* 服务网格 */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2.5rem;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(100, 149, 237, 0.5);
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #909090;
+}
+
+/* 页脚 */
 footer {
-    background: #333;
-    color: white;
+    background: #0a0a0a;
+    color: #707070;
     text-align: center;
-    padding: 1.5rem;
-    margin-top: auto;
+    padding: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 1rem 2rem;
+    }
+
+    .slogan-box {
+        margin-left: 5%;
+        max-width: 500px;
+        padding: 3rem 2.5rem;
+    }
+
+    .slogan-title {
+        font-size: 2.5rem;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
-    header h1 {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .navbar nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .hero-section {
+        height: 100vh;
+    }
+
+    .slogan-box {
+        margin: 2rem;
+        padding: 2.5rem 2rem;
+    }
+
+    .slogan-title {
+        font-size: 2rem;
+    }
+
+    .slogan-subtitle {
+        font-size: 1rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .content-section {
+        padding: 3rem 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .slogan-title {
         font-size: 1.8rem;
     }
 
-    nav ul {
-        flex-direction: column;
-        gap: 1rem;
+    .slogan-subtitle {
+        font-size: 0.95rem;
     }
 
-    .hero h2 {
-        font-size: 1.5rem;
-    }
-
-    section {
-        padding: 1.5rem;
+    .cta-button {
+        padding: 0.8rem 2rem;
+        font-size: 0.9rem;
     }
 }

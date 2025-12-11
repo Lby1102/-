@@ -3,44 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>临时门户网站</title>
+    <title>从深圳走向世界 - 国际教育机构</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>欢迎访问临时门户网站</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">首页</a></li>
-                    <li><a href="#about">关于</a></li>
-                    <li><a href="#contact">联系</a></li>
-                </ul>
-            </nav>
-        </header>
+    <!-- 导航栏 -->
+    <header class="navbar">
+        <div class="logo">
+            <h1>SHENZHEN INTERNATIONAL</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">首页</a></li>
+                <li><a href="#about">关于我们</a></li>
+                <li><a href="#services">核心服务</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <main>
-            <section id="home" class="hero">
-                <h2>临时门户网站</h2>
-                <p>这是一个通过 GitHub Pages 部署的临时门户网站</p>
-                <p class="update-time">最后更新: <span id="updateTime"></span></p>
-            </section>
+    <!-- 主视觉区域 -->
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1600&h=900&fit=crop" alt="教育背景">
+            </div>
+            <div class="slogan-box">
+                <h2 class="slogan-title">从深圳走向世界</h2>
+                <p class="slogan-subtitle">
+                    我们是一家负责将您的孩子带入课题组、<br>
+                    增长素质化能力、培养国际视野的机构。
+                </p>
+                <button class="cta-button">了解更多</button>
+            </div>
+        </section>
 
-            <section id="about">
-                <h2>关于本站</h2>
-                <p>本网站部署在 GitHub Pages 上，可以通过 GitHub 仓库进行内容更新。</p>
-            </section>
+        <section id="about" class="content-section">
+            <div class="container">
+                <h2>关于我们</h2>
+                <p>致力于为学生提供优质的国际教育资源，帮助他们在全球化的时代中脱颖而出。</p>
+            </div>
+        </section>
 
-            <section id="contact">
-                <h2>联系方式</h2>
+        <section id="services" class="content-section dark">
+            <div class="container">
+                <h2>核心服务</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>课题研究</h3>
+                        <p>带领学生进入专业课题组，参与实际科研项目</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>素质培养</h3>
+                        <p>全面提升学生的综合素质与能力</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>国际视野</h3>
+                        <p>培养具有全球竞争力的国际化人才</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section">
+            <div class="container">
+                <h2>联系我们</h2>
+                <p>地址：深圳市</p>
                 <p>GitHub: <a href="https://github.com/Lby1102/-" target="_blank">https://github.com/Lby1102/-</a></p>
-            </section>
-        </main>
+            </div>
+        </section>
+    </main>
 
-        <footer>
-            <p>&copy; 2025 临时门户网站. All rights reserved.</p>
-        </footer>
-    </div>
+    <footer>
+        <p>&copy; 2025 Shenzhen International Education. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
